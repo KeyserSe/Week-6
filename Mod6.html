@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Cartoon Dogs</title>
+</head>
+
+<body>
+    <h2>Fictional Cartoon Dogs</h2>
+    <p id="dogInfo"></p>
+
+    <script>
+        // Constructor function for dog objects
+        function Dog(name, bark, tvShow, character, canTalk) {
+            this.name = name;
+            this.bark = bark;
+            this.tvShow = tvShow;
+            this.character = character;
+            this.canTalk = canTalk;
+
+            // Method to determine if the dog can talk
+            this.myGreeting = function () {
+                return this.canTalk
+                    ? `Hello, I'm ${this.name}! I can talk!`
+                    : `Hello, I'm ${this.name}. I cannot talk.`;
+            };
+        }
+
+        // Creating two fictional dogs
+        const astro = new Dog("Astro", "not scary", "The Jetsons", "Great Dane", true);
+        const scooby = new Dog("Scooby-Doo", "Goofy and playful", "Scooby-Doo", "Great Dane", true);
+
+        // Store dogs in an object for easy lookup
+        const dogs = {
+            "Astro": astro,
+            "Scooby-Doo": scooby
+        };
+
+        // Displaying properties of each dog using for...in loop
+        let output = "";
+        for (let key in dogs) {
+            output += `<h3>${dogs[key].name}</h3>`;
+            for (let prop in dogs[key]) {
+                if (typeof dogs[key][prop] !== "function") {  // Avoid listing methods
+                    output += `<p><strong>${prop}:</strong> ${dogs[key][prop]}</p>`;
+                }
+            }
+            output += `<p>${dogs[key].myGreeting()}</p>`;
+        }
+
+        // Ask the user to select a dog
+        let userChoice = prompt("Type a dog's name (Astro or Scooby-Doo) to learn more:");
+
+        // Display the selected dog or an error message
+        if (dogs[userChoice]) {
+            document.getElementById("dogInfo").innerHTML = `
+                <h2>${dogs[userChoice].name}</h2>
+                <p><strong>Bark:</strong> ${dogs[userChoice].bark}</p>
+                <p><strong>TV Show:</strong> ${dogs[userChoice].tvShow}</p>
+                <p><strong>Character:</strong> ${dogs[userChoice].character}</p>
+                <p>${dogs[userChoice].myGreeting()}</p>
+            `;
+        } else {
+            document.getElementById("dogInfo").innerHTML = "<p style='color:red;'>Error: That dog is not in the list.</p>";
+        }
+
+    </script>
+</body>
+
+</html>
