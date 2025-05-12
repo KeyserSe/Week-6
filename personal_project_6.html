@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notary by Sean M. Keyser</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Professional Mobile and Remote Notary Services Across Florida. Sign with Confidence. Seal with Trust.">
+<meta name="keywords" content="Notary, Florida Notary, Mobile Notary, Remote Notary, Loan Signing Agent, Online Notary, Notary Public">
+<meta name="author" content="Sean M. Keyser">
+
+<!-- Open Graph Meta -->
+<meta property="og:title" content="Notary by Sean M. Keyser">
+<meta property="og:description" content="Professional Mobile and Remote Notary Services Across Florida. Book your appointment today.">
+<meta property="og:image" content="favicon.png">
+<meta property="og:url" content="https://www.notarybysean.com">
+<meta property="og:type" content="website">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f7;
+    color: #212529;
+    animation: fadeInAnimation ease 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation { 0% { opacity: 0; } 100% { opacity: 1; } }
+header {
+    background: linear-gradient(135deg, #083358 0%, #00b4d8 100%);
+    color: white;
+    padding: 10px 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.header-wrapper { display: flex; justify-content: center; }
+.header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+    transition: all 0.5s ease;
+}
+.header-container img {
+    width: 240px;
+    height: auto;
+    mix-blend-mode: lighten;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoomInBounce 1s ease forwards;
+    animation-delay: 0.2s;
+}
+@keyframes zoomInBounce { 0% { opacity: 0; transform: scale(0.8); } 50% { transform: scale(1.05); } 100% { opacity: 1; transform: scale(1); } }
+.header-text { opacity: 0; transform: translateY(20px); animation: fadeSlideIn 1s ease forwards; animation-delay: 0.5s; }
+@keyframes fadeSlideIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+.flex-container { align-items: stretch; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+h2 { border-bottom: 2px solid #0d3b66; padding-bottom: 10px; margin-bottom: 20px; }
+.card {
+    height: 100%;
+    background: linear-gradient(135deg, #ffffff 0%, #f4f6f8 100%);
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 300px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #e8f0fe 0%, #ffffff 100%);
+}
+.contact-info p { margin: 8px 0; }
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #083358;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0.9;
+}
+.button:hover {
+    background-color: #0077b6;
+    transform: scale(1.05);
+    opacity: 1;
+    box-shadow: 0 0 12px rgba(0, 119, 182, 0.6);
+}
+footer { background: linear-gradient(135deg, #083358 0%, #00b4d8 100%); color: white; text-align: center; padding: 20px 10px; font-size: 0.9em; }
+@media (max-width: 768px) {
+    .flex-container { flex-direction: column; align-items: center; }
+    .card { flex: none; width: 90%; }
+    .header-container { flex-direction: column; align-items: center; text-align: center; }
+    .header-container img { width: 140px; transition: width 0.5s ease; }
+}
+.header-text h1 { font-size: 2.8em; margin: 0; }
+.header-text p { font-size: 1.3em; margin-top: 10px; margin-bottom: 0; }
+</style>
+
+<!-- jQuery Mobile Theme (MOD5_Activity_Theme) -->
+<link rel="stylesheet" href="themes/MOD5_Activity_Theme.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+<div data-role="page" data-theme="a">
+<header data-role="header" data-theme="a">
+<div class="header-wrapper">
+<div class="header-container">
+<img src="C:\Users\skeys\OneDrive - Rasmussen, Inc\Mobile App Dev\Week 3\Modified LOGO 2.png" alt="SMK Logo">
+<div class="header-text">
+<h1>Notary by Sean M. Keyser</h1>
+<p><em>Sign with Confidence. Seal with Trust.</em></p>
+</div>
+</div>
+</div>
+</header>
+<button onclick="togglePanel()" style="margin: 20px; padding: 10px 15px;" class="button">☰ Menu</button>
+
+<div id="sidePanel" data-role="panel" data-theme="b" style="position: fixed; top: 0; left: -260px; width: 250px; height: 100%; background: #083358; color: white; overflow-x: hidden; transition: 0.5s; padding: 20px; z-index: 1000;">
+  <h2 style="color: #00b4d8;">Quick Links</h2>
+  <a href="#services" style="color: white; display: block; margin: 15px 0;">Services</a>
+  <a href="#about" style="color: white; display: block; margin: 15px 0;">About</a>
+  <a href="#contact" style="color: white; display: block; margin: 15px 0;">Contact</a>
+  <a href="#services-filtered" style="color: white; display: block; margin: 15px 0;">Find a Service</a>
+  <button onclick="togglePanel()" style="margin-top: 20px;" class="button">Close</button>
+</div>
+
+<div class="flex-container">
+<section id="services" class="card" data-theme="c">
+<h2>Services Offered</h2>
+<ul>
+<li>General Notarizations (Affidavits, Powers of Attorney, Wills)</li>
+<li>Mobile Notary Appointments at Your Location</li>
+<li>Remote Online Notarization (RON) via Secure Video</li>
+<li>Certified Loan Signing Services</li>
+</ul>
+<h3>Steps to Book a Mobile Notary:</h3>
+<ol>
+<li>Schedule an appointment online or via phone</li>
+<li>Prepare your documents and valid ID</li>
+<li>Meet at the agreed location</li>
+<li>Complete notarization and payment</li>
+</ol>
+</section>
+<section id="about" class="card" data-theme="c">
+<h2>About Sean</h2>
+<p>Sean M. Keyser is a Florida-commissioned Notary Public and certified Loan Signing Agent with a commitment to professionalism, accuracy, and confidentiality. With flexible availability and mobile service, Sean makes it easy and convenient to have your documents notarized at your preferred location or online from anywhere.</p>
+<h3>Certifications & Memberships:</h3>
+<ul>
+<li>Florida Commissioned Notary Public</li>
+<li>National Notary Association (NNA) Member</li>
+<li>Certified Loan Signing Agent</li>
+</ul>
+</section>
+</div>
+<section id="services-filtered" class="card">
+<h2>Find a Service</h2>
+<input id="serviceSearch" type="text" placeholder="Search services..." style="width:100%; padding:10px; margin-bottom:10px;">
+<ul id="serviceList">
+<li>Notarizing Wills</li>
+<li>Real Estate Closings</li>
+<li>Remote Online Notarizations</li>
+<li>Medical Document Notarization</li>
+<li>Affidavit and Sworn Statements</li>
+</ul>
+</section>
+<section id="contact" class="card contact-info" data-theme="b">
+<h2>Contact Sean</h2>
+<p><strong>Phone:</strong> (352) 973-0806</p>
+<p><strong>Email:</strong> <a href="mailto:notarybysean@outlook.com">notarybysean@outlook.com</a></p>
+<p><strong>Website:</strong> <a href="http://www.notarybysean.com" target="_blank">www.notarybysean.com</a></p>
+<h3>Send a Message</h3>
+<form>
+<label for="fullName">Full Name:</label>
+<input type="text" id="fullName" name="fullName" placeholder="Your Name" required style="width:100%; padding:10px; margin-bottom:10px;">
+<label for="email">Email Address:</label>
+<input type="email" id="email" name="email" placeholder="you@example.com" required style="width:100%; padding:10px; margin-bottom:10px;">
+<label for="message">Message:</label>
+<textarea id="message" name="message" placeholder="Type your message here..." required style="width:100%; padding:10px; margin-bottom:10px; height:100px;"></textarea>
+<button type="submit" class="button">Submit</button>
+</form>
+</section>
+<footer data-role="footer" data-theme="a">
+&copy; 2025 Notary by Sean M. Keyser. All rights reserved.
+</footer>
+<script>
+const serviceSearch = document.getElementById('serviceSearch');
+const serviceList = document.getElementById('serviceList');
+serviceSearch.addEventListener('input', function() {
+const filter = serviceSearch.value.toLowerCase();
+const services = serviceList.getElementsByTagName('li');
+Array.from(services).forEach(function(service) {
+const text = service.textContent;
+if (text.toLowerCase().includes(filter)) {
+service.style.display = '';
+} else {
+service.style.display = 'none';
+}
+});
+});
+</script>
+
+<script>
+function togglePanel() {
+  const panel = document.getElementById("sidePanel");
+  if (panel.style.left === "0px") {
+    panel.style.left = "-260px";
+  } else {
+    panel.style.left = "0px";
+  }
+}
+</script>
+</div>
+</body>
+</html>
